@@ -1,0 +1,112 @@
+/* styles.css */
+*{
+   /* border:2px solid #f38138;--*/
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: "Batangas";
+    src: url('fonts/Batangas.otf') format('opentype'); /* path to the font file */
+    font-weight: 700;
+    font-style: normal;
+}
+/*----------------------------- HERO SECTION STARTS------------- */
+.hero-section {
+    display: block;
+    position: absolute; /* Ensure this is on top of the video */
+    z-index: 1; /* Set higher than video and overlay */
+    top: 35%; /* Center vertically */
+    left: 10%; /* Center horizontally */
+    transform: translate(); /* Adjust to ensure text is centered */
+    color: #fff; /* Ensure it's visible */
+}
+    
+    
+.small-text {
+    font-family: "Batangas", Montserrat;
+    font-size: 4rem; /* Responsive font size  */
+    color: #ffce00;
+    margin: 0;
+    text-align: left;
+ }
+
+.big-text {
+    font-size: 2rem; /* Responsive font size */
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+}
+.button-container{
+    margin-top: 15px;
+    height: auto;
+}
+.cta-button-hero {
+    background-color: #f38138;
+    color: white;
+    margin-top: 15px;
+    padding:10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 1s ease;
+}
+
+.cta-button-hero:hover {
+    background-color: #ffce00;
+}
+
+    
+/* Fullscreen video */
+
+.hero-background {
+    position: relative; /* Added for positioning */
+    margin: 0 auto;
+    overflow: hidden;
+    top: -150px; /* Adjusting the position of the video */
+}
+video {
+    position: relative; /* Added for positioning */
+    width: 100%;
+    z-index: 0; /* Ensure it's behind the overlay */
+}
+.hero-background::after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(16, 58, 85, 0.6); /* Color with transparency */
+    z-index: 0; /* Overlay above video */
+}
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        top:20%;       
+        border-right: none; /* Remove border for mobile */
+    }
+    .hero-description {
+        margin: 5px 0; /* Adjust margins for smaller screens */
+    }
+    .cta-button-hero {
+        width: 80%; /* Full width button on smaller screens */
+    }
+    .hero-background {
+        top:0;
+        }
+         .small-text{
+            font-size: 1.5rem;
+        }
+        .big-text{
+            font-size: 1rem;
+        }
+        
+}
+

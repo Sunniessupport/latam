@@ -1,0 +1,182 @@
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    color: white; /* Text color */
+    width:100%;
+    height: 55px;
+    background-color: transparent;    
+    position: absolute;
+    overflow:hidden;
+    z-index: 2; /* Set a higher z-index for the menu */
+    
+}
+
+.logo {
+    padding-left: 20px; /* Optional: add some padding around the logo */
+    padding-right: 40px;
+    /*border-radius: 0 25px 25px 0;  Optional: round the corners */
+    width: 200px;
+    margin: 0 auto;
+}
+
+.desktop-menu{
+    margin: 0 40px;
+}
+
+
+.desktop-menu ul li {
+    display: inline-block; /* Changed to inline-block for proper positioning */
+    position: relative; /* Needed for absolute positioning of dots */
+    margin: 0 15px; /* Spacing between menu items */
+}
+
+.desktop-menu ul li:hover .dots {
+    display: flex; /* Show dots on hover */
+    justify-content: center; /* Center the dots */
+}
+
+.dots {
+    position: absolute; /* Absolutely positioned relative to hover-text */
+    top: 100%; /* Position below the text */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center align */
+    display: none; /* Hide dots by default */
+    margin-top: 5px; /* Space between text and dots */
+}
+
+.dots span {
+    display: inline-block;
+    width: 4px; /* Dot width */
+    height: 4px; /* Dot height */
+    margin: 0 4px; /* Space between dots */
+    background-color: #ffce00; /* Dot color */
+    border-radius: 50%; /* Make dots circular */
+}
+
+.desktop-menu a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.cta-button {
+    background-color: #f38138; /* CTA button background color */
+    color: white; /* CTA button text color */
+    padding: 5px 10px; /* Padding for CTA button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 15px; /* Rounded corners */
+    font-size:0.8rem;
+  
+}
+.cta-button:hover {
+    background-color: #ffce00; /* Change color on hover */
+}
+
+.mobile-menu {
+  padding: 0px;
+  display: flex-end;
+  margin-left:auto;
+   }
+.ham-menu {
+  height: 40px;
+  width: 50px;
+  position: relative;
+  cursor: pointer; 
+}
+.ham-menu span {
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1){
+  top:30%;
+  }
+.ham-menu span:nth-child(3){
+  top:70%;
+  }
+
+/*Offscreen menu */
+.off-screen-menu {
+    background-color: #103a55;
+    height: 80vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed; 
+    top: -94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+      
+}
+/*off-screen-menu when becomes active */
+.off-screen-menu.active {
+    position: fixed;
+    top: 50px;
+    z-index: 10; /* Ensure it stacks above other content */
+}
+/* The dropdown list (hidden by default) */
+.mobile-menu-list {
+     /* Initially hidden */
+     /* Absolute position to drop down */
+    top: 100%; /* Position below the toggle button */
+    right: 0; /* Align with the right edge */
+    background-color: #ffffff; /* Background color for the dropdown */
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width dropdown */
+}
+
+
+/* Dropdown list items */
+
+.mobile-menu-list a {
+    background-color: #103a55;
+    display: block;
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the dropdown items */
+    text-decoration: none; /* Remove underline */
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+     .mobile-menu {
+        display: none; /* Hide mobile menu on larger screens */
+    }
+}
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* Hide desktop menu on small screens screens */
+    }
+  .main-menu{
+    background-color:transparent;
+    color:#103a55;
+    height:50px;
+    border-bottom: 2px solid #ffce00;
+  }
+  .cta-button{
+      display: none;
+  }
+.logo-container img {
+    display: block;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding-left: 10px; /* Optional: add some padding around the logo */
+    padding-right: 40px;
+    border-radius: 0 25px 25px 0; /* Optional: round the corners */
+    width: 150px;
+}
+}

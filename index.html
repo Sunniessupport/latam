@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Layout Sunnies Support Latinoamerica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/Batangas.otf">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body> 
+      <div class="main-menu">
+         <div class="logo-container">
+         <img src="media/logo/logo.png" alt="Logo" class="logo"/>
+         </div>
+        <div class="desktop-menu">
+            <ul>
+                <li>
+                    <a href="www.sunniessupport/tu-proceso">Tu proceso</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="#">Destinos</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="#">Sobre Nosotros</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="#">Blog</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="#" class="cta-button">Contáctanos</a>
+                </li>
+            </ul>
+        </div>
+      
+      <!--MOBILE DEVICE MENU-->      
+      <div class="mobile-menu">
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+      </div>
+       <div class="off-screen-menu">
+            <ul class="mobile-menu-list">
+                <li><a href="#">Tu proceso</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+        <!--FINISH MOBILE DEVICES MENU-->
+        </div>
+    </div>
+<div class="hero-background">
+    <video autoplay muted loop id="background-video">
+        <source src="media/video/Home.mp4" type="video/mp4">
+    </video>
+    <div class="hero-section">
+        <h2 class="big-text">Una nueva</h2>
+        <h1 class="small-text">historia</h1>
+        <h2 class="big-text">te está</h2>
+        <h1 class="small-text">esperando</h1>
+        <h2 class="big-text">en el</h2>
+        <h1 class="small-text">exterior</h1>
+        <div class="button-container"><a href="#services" class="cta-button-hero">Learn More</a>
+        </div>
+        
+    </div>
+</div>
+<main>
+    
+</main>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamMenu = document.querySelector('.ham-menu');
+            const offScreenMenu = document.querySelector('.off-screen-menu');
+
+            hamMenu.addEventListener('click', () => {
+                offScreenMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

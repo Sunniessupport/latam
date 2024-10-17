@@ -1,6 +1,6 @@
 /* styles.css */
 *{
-   /* border:2px solid #f38138;--*/
+/*  border:2px solid #f38138;--*/
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +16,21 @@ body {
     font-weight: 700;
     font-style: normal;
 }
-/*----------------------------- HERO SECTION STARTS------------- */
+
+h1{
+    font-family: "Batangas", Montserrat;
+    color: #103a55;
+    margin: 0;
+}
+
+p{
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+
+/*------------------------------ HERO SECTION STARS----------------------------*/
 .hero-section {
     display: block;
     position: absolute; /* Ensure this is on top of the video */
@@ -26,17 +40,12 @@ body {
     transform: translate(); /* Adjust to ensure text is centered */
     color: #fff; /* Ensure it's visible */
 }
-    
-    
-.small-text {
-    font-family: "Batangas", Montserrat;
+.big-text {
     font-size: 4rem; /* Responsive font size  */
     color: #ffce00;
-    margin: 0;
     text-align: left;
  }
-
-.big-text {
+.small-text {
     font-size: 2rem; /* Responsive font size */
     font-weight: 400;
     color: #ffffff;
@@ -65,10 +74,13 @@ body {
 /* Fullscreen video */
 
 .hero-background {
+    
     position: relative; /* Added for positioning */
     margin: 0 auto;
+    margin-bottom: -150px;
     overflow: hidden;
     top: -150px; /* Adjusting the position of the video */
+    border-bottom: 10px solid #ffce00;
 }
 video {
     position: relative; /* Added for positioning */
@@ -86,27 +98,187 @@ video {
     z-index: 0; /* Overlay above video */
 }
 
-/* Media Queries for additional responsiveness */
+/*-----------------------END HERO SECTION STYLES----------------------------*/
+
+/*-----------------------SERVICES SECTION STARTS----------------------------*/
+.services-container{
+    padding:50px 0;
+    margin-top: 0;
+}
+.services-header{
+    padding:0 20%;
+    margin: 0;
+}
+.text-box{
+    background-color: #ffce00;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 5px 5px 2px 5px ;
+}
+
+/*-------------------------------FLIP BOX STYLES-----------------------------*/
+
+.zoom-box{
+    margin-top:50px;
+    display:flex;
+    width:100%;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.zoom-box-inner{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 300px;
+    margin:0 50px;
+    padding: 0;
+}
+/*------------------------SERVICES BOX HOVER ANIMATION --------------------*/
+.zoom-box-front, .zoom-box-back{
+position:absolute;
+height: 100%;
+width: 100%;
+margin:0 auto;
+border-radius: 15px;
+transition: transform 1s, opacity 0.5s ease;
+overflow: hidden;
+}
+   .zoom-box-front{
+    background: radial-gradient(circle, 
+    rgb(255, 222, 91) 20%,  /* Lighter yellow at 20% */
+    rgb(255, 206, 0) 75%);  /* Darker yellow at 75% */
+    z-index: 2;
+   transform:scale(1);   ;
+   opacity:1;
+}
+
+.zoom-box-back{
+   
+   background-image:url(media/images/language-image-hover-box-background.png);
+   background-size: cover;
+   z-index: 1;
+   transform:scale(0.3);
+   
+}
+.zoom-box-inner:hover{
+    cursor: pointer;
+}
+
+.zoom-box-inner:hover .zoom-box-front{
+    transform:scale(0.3);
+    opacity:0;
+}
+
+.zoom-box-inner:hover .zoom-box-back{
+    transform:scale(1);
+}  
+.zoom-box-inner:active .zoom-box-back{
+    transform:scale(0.9);
+}  
+
+/*-----------------YELLOW BOX CONTENT---------------- */
+.zoom-box-front-content, .zoom-box-back-content{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow:hidden;
+    box-sizing: border-box;
+}
+.zoom-box-front-content img{
+    width:50%;
+    border-bottom: 5px solid #103a55;
+}
+.zoom-box-front-content h1, 
+.zoom-box-front-content p {
+    width: 100%; /* Ensure h1 and p fill the container */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is part of width */
+    overflow-wrap: break-word; /* Prevent text from overflowing */
+    margin: 5px 0; /* Optional: add some spacing */
+    padding: 5px;
+}
+/*----------------------FINISH YELLOW BOX CONTENT ----------------*/
+/*---------------------------BLUE BOX CONTENT-------------------- */
+.zoom-box-back-content{
+background-color: rgba(4, 158, 186, 0.8);
+padding: 10px ;
+justify-content: center;
+}
+.zoom-box-back-content h1, 
+.zoom-box-back-content p {
+    color:#ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 20px;
+    line-height: 1.2;
+    
+}
+.zoom-box-back-content h1{
+    font-size: 1.5rem;
+}
+
+/*---------------------FINISH BLUE BOX CONTENT-------------------- */
+
+/*---------------------------RESPONSIVE STYLES-------------------------- */
 @media (max-width: 768px) {
     .hero-section {
-        top:20%;       
+        top:25%;       
         border-right: none; /* Remove border for mobile */
+        height: auto;
     }
-    .hero-description {
-        margin: 5px 0; /* Adjust margins for smaller screens */
-    }
-    .cta-button-hero {
+    .button-container {
         width: 80%; /* Full width button on smaller screens */
+        height: auto;
     }
     .hero-background {
         top:0;
+        height: auto;
+        margin: 0;
+        }
+        video {
+        object-fit: contain;
+        width: 130%;    
+        
         }
          .small-text{
             font-size: 1.5rem;
+            height: auto;
         }
         .big-text{
-            font-size: 1rem;
+            font-size: 2rem;
         }
-        
-}
 
+        .cta-button-hero{
+            font-size: 0.8rem;
+        }
+        .services-header{
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .zoom-box{
+            flex-direction: column;
+        }
+        .zoom-box-inner{
+            width: 80%;
+            height:300px;
+        }
+        .zoom-box-front-content img{
+            width:15%
+                    }
+        .zoom-box-inner h1{
+            font-size: 1.5rem;
+        }
+        .zoom-box-front-inner   p{
+            font-size: 0.8rem;
+           
+        }
+
+}

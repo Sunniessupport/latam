@@ -172,13 +172,13 @@ overflow: hidden;
 }
 
 .zoom-box-inner:nth-of-type(1) .zoom-box-back {
-    background-image: url('media/images/imagen-idiomas-tablero-fondo.png');
+    background-image: url('/images/imagen-idiomas-tablero-fondo.png');
 }
 .zoom-box-inner:nth-of-type(2) .zoom-box-back{
-    background-image: url('media/images/fondo-imagen-estudios-universitarios.png');
+    background-image: url('/images/fondo-imagen-estudios-universitarios.png');
 }
 .zoom-box-inner:nth-of-type(3) .zoom-box-back {
-    background-image: url('media/images/fondo-vacaciones-working-holiday.png');
+    background-image: url('/images/fondo-vacaciones-working-holiday.png');
 }
 
 

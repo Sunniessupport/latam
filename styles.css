@@ -208,8 +208,8 @@ p{
 
 .divider{
     width:100%;
-    background-color: #ffce00;
-    height:55px;
+    background-color: transparent;
+    height:60px;
 }
 .big-text {
   color: #ffce00;

@@ -32,6 +32,9 @@ h1{
 h2{
     font-size: clamp(8px,3vw,120px);    
 }
+
+
+
 p{
     font-size: clamp(6px, 2vw, 34px);
     text-align: justify;
@@ -264,38 +267,52 @@ video {
 /*-----------------------SERVICES SECTION STARTS----------------------------*/
 .services-container{
     height: auto;
-    margin-top:50px;
+    margin-top:5%;
+    width: 100%;
 }
 .header{
-    padding:0 20%;
-    margin: 0;
+    padding:0 10%;
+    width:100%;
 }
 .services-header{
     overflow: hidden;
 }
 .services-header h1{
-    font-size: 1rem;
     color: #103a55;
     text-align: center;
 }
-
+.header p{
+    margin-top:5%;
+}
 .text-box{
     background-color: #ffce00;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    padding: 5px 5px 2px 5px ;
+    padding: 2px 5px 2px 5px ;
 }
 
 /*-------------------------------FLIP BOX STYLES-----------------------------*/
 
 .zoom-box{
-    margin-top:50px;
+    margin-top:5%;
     display:flex;
     width:100%;
-    height:500px;
+    height:30%;
     justify-content: center;
     align-items: center;
 
+}
+.zoom-box-inner h2{
+    font-size: clamp(8px,2vw,40px);
+    font-family: "Batangas", Montserrat;
+}
+.zoom-box-inner h2, .zoom-box-inner p{
+    text-align: center;
+    color:#103a55;
+}
+
+.zoom-box-inner p{
+    font-size: clamp(8px,1.5vw,40px);
 }
 
 .zoom-box-inner{
@@ -724,10 +741,4 @@ cursor: pointer;
         text-align: center;
         font-size: 0.8rem;
     }
-    
-    
 }            
-       
-
-
-

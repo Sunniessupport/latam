@@ -30,10 +30,10 @@ h1{
 }
 
 h2{
-    font-size: clamp(6px,3vw,120px);    
+    font-size: clamp(8px,3vw,120px);    
 }
 p{
-    font-size: clamp(10px, 1.5rem, 34px);
+    font-size: clamp(6px, 2vw, 34px);
     text-align: justify;
     font-weight: 500;
 }
@@ -230,11 +230,11 @@ p{
 .cta-button-hero {
     background-color: #f38138;
     color: white;
-    padding:3%;
+    padding:2%;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 1s ease, content 1s ease;
-    font-size: clamp(5px,1.5rem,25px);
+    font-size: clamp(12px,2vw,25px);
     
 }
 

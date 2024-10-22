@@ -661,6 +661,28 @@ justify-content: center;
            text-align: center;
            font-size: 0.8rem;
        }
+       .gallery{
+        width: 100%;
+        
+    }
+    .gallery-list {
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+    
+    .gallery-list::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+        height: 8px; /* Height of the scrollbar */
+    }
+    
+    .gallery-list::-webkit-scrollbar-thumb {
+        background: #049eba; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .gallery-list::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Background of the scrollbar track */
+        border-radius: 10px; /* Rounded corners */
+    }
 }
 
       
@@ -700,8 +722,23 @@ justify-content: center;
         text-align: center;
         font-size: 0.8rem;
     }
+    .gallery-list {
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+    
+    .gallery-list::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+        height: 8px; /* Height of the scrollbar */
+    }
+    
+    .gallery-list::-webkit-scrollbar-thumb {
+        background: #049eba; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .gallery-list::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Background of the scrollbar track */
+        border-radius: 10px; /* Rounded corners */
+    }
 }            
-       
-
-
-
+      
